@@ -16,18 +16,24 @@ namespace FizzBuzz.UnitTests.Service
             _sut = new FizzBuzzService();
         }
 
-        [Fact]
-        public void ItShouldReturnFizz_IfInputIsDivisibleBy3()
+        [Theory]
+        [InlineData("3")]
+        [InlineData("6")]
+        [InlineData("9")]
+        public void ItShouldReturnFizz_IfInputIsDivisibleBy3(string input)
         {
-            var result = _sut.FetchResult("3");
+            var result = _sut.FetchResult(input);
 
             Assert.Equal("Fizz", result.Results[0]);
         }
 
-        [Fact]
-        public void ItShouldReturnFizz_IfInputIsDivisibleBy5()
+        [Theory]
+        [InlineData("5")]
+        [InlineData("10")]
+        [InlineData("20")]
+        public void ItShouldReturnBuzz_IfInputIsDivisibleBy5(string input)
         {
-            var result = _sut.FetchResult("5");
+            var result = _sut.FetchResult(input);
 
             Assert.Equal("Buzz", result.Results[0]);
         }
