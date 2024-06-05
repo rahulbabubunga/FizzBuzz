@@ -7,3 +7,5 @@
 /obj
 /FizzBuzz/bin/Debug/net8.0
 /FizzBuzz/obj
+/FizzBuzz.UnitTests/bin/Debug/net8.0
+/FizzBuzz.UnitTests/obj
