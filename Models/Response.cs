@@ -3,12 +3,12 @@
     public class Response
     {
         public string Input { get; set; }
-        public string Result { get; set; }
+        public List<string> Results { get; set; }
 
-        public Response(string input, string result)
+        public Response(string input, List<string> results)
         {
             Input = input;
-            Result = result;
+            Results = results;
         }
 
     }
