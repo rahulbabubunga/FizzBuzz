@@ -5,3 +5,5 @@
 /.vs/FizzBuzz
 /bin/Debug/net8.0
 /obj
+/FizzBuzz/bin/Debug/net8.0
+/FizzBuzz/obj
