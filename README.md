@@ -6,9 +6,26 @@ The api accepts List of strings as arguments.
 
 The api would do below.
 
-for each value in list { If the value is a multiple of 3 then output the word “Fizz” If the value is a multiple of 5 then output the word “Buzz” If the value is divisible by both 3 and 5 then output the word “FizzBuzz” }
+for each value in list 
+{ 
+If the value is a multiple of 3 then output the word “Fizz”
+If the value is a multiple of 5 then output the word “Buzz”
+If the value is divisible by both 3 and 5 then output the word “FizzBuzz” 
+}
 
-sample curl:
+------------------------------------------------------------------------------------
+Running the solution:
+you would need visual studio 2022 to run this.
+this is based on visual studio built in .net 8 template.
+
+Open the solution and press green button
+------------------------------------------------------------------------------------
+Run an sample request:
+
+you can use the swagger page or 
+use curl like below.
+
+
 
 Request:
 
