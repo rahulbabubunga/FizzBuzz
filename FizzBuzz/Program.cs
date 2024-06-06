@@ -8,7 +8,9 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddScoped<IFizzBuzzService, FizzBuzzService>();
+
+//singleton would be enough as this aint a db call.
+builder.Services.AddSingleton<IFizzBuzzService, FizzBuzzService>();
 
 var app = builder.Build();
 

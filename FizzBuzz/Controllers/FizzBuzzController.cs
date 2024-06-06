@@ -1,4 +1,5 @@
-﻿using FizzBuzz.Service;
+﻿using FizzBuzz.Models;
+using FizzBuzz.Service;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FizzBuzz.Controllers
@@ -15,8 +16,11 @@ namespace FizzBuzz.Controllers
 
         [HttpGet]
         [Route("execute")]
+        [ProducesResponseType(typeof(List<Response>), 200)]
         public async Task<IActionResult> Execute([FromQuery] List<string> inputs)
         {
+
+            //Controller should be as clean as possible. its ideal to not to write unit test controllers, so all the business logic must be offloaded to various services.
             var response = await _fizzBuzzService.FetchResults(inputs);
             return Ok(response);
 
