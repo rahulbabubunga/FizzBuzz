@@ -1,7 +1,5 @@
 ﻿using FizzBuzz.Service;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Diagnostics.HealthChecks;
 
 namespace FizzBuzz.Controllers
 {
@@ -21,6 +19,7 @@ namespace FizzBuzz.Controllers
         {
             var response = await _fizzBuzzService.FetchResults(inputs);
             return Ok(response);
+
         }
 
     }

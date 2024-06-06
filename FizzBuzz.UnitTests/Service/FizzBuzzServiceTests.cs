@@ -1,9 +1,4 @@
 ﻿using FizzBuzz.Service;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FizzBuzz.UnitTests.Service
 {
@@ -36,6 +31,40 @@ namespace FizzBuzz.UnitTests.Service
             var result = _sut.FetchResult(input);
 
             Assert.Equal("Buzz", result.Results[0]);
+        }
+
+        [Theory]
+        [InlineData("15")]
+        [InlineData("30")]
+        [InlineData("45")]
+        public void ItShouldReturnFizzBuzz_IfInputIsDivisibleBy5And3(string input)
+        {
+            var result = _sut.FetchResult(input);
+
+            Assert.Equal("FizzBuzz", result.Results[0]);
+        }
+
+        [Theory]
+        [InlineData("")]
+        [InlineData("A")]
+        [InlineData("AB")]
+        public void ItShouldReturnInvalidItem_IfInputIsEmptyStringOrAnNonNumeric(string input)
+        {
+            var result = _sut.FetchResult(input);
+
+            Assert.Equal("Invalid Item", result.Results[0]);
+        }
+
+        [Theory]
+        [InlineData("2")]
+        [InlineData("23")]
+        [InlineData("16")]
+        public void ItShouldReturnAptText_IfInputNeitherDivisibleby3Nor5(string input)
+        {
+            var result = _sut.FetchResult(input);
+
+            Assert.Equal($"Divided {input} by 3", result.Results[0]);
+            Assert.Equal($"Divided {input} by 5", result.Results[1]);
         }
 
     }
