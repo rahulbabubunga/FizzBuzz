@@ -18,11 +18,11 @@ Running the solution:
 you would need visual studio 2022 to run this.
 this is based on visual studio built in .net 8 template.
 
-Open the solution and press green button
+Open the solution in visual studio 2022 and press green button
 ------------------------------------------------------------------------------------
 Run an sample request:
 
-you can use the swagger page or 
+you can use the packaged swagger page or 
 use curl like below.
 
 
