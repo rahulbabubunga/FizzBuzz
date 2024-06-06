@@ -60,6 +60,7 @@ namespace FizzBuzz.UnitTests.Service
         }
 
         [Theory]
+        [InlineData("1")]
         [InlineData("2")]
         [InlineData("23")]
         [InlineData("16")]
