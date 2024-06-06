@@ -20,7 +20,7 @@ namespace FizzBuzz.Controllers
         public async Task<IActionResult> Execute([FromQuery] List<string> inputs)
         {
 
-            //Controller should be as clean as possible. its ideal to not to write unit test controllers, so all the business logic must be offloaded to various services.
+            //Controller should be as clean as possible. its ideal to not to write unit test against controllers, so all the business logic must be offloaded to various services i.e _fizzBuzzService.
             var response = await _fizzBuzzService.FetchResults(inputs);
             return Ok(response);
 

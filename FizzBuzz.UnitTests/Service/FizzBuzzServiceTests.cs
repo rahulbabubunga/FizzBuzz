@@ -76,9 +76,9 @@ namespace FizzBuzz.UnitTests.Service
         public async void ItShouldReturn_AResult_ForEachInput()
         {
             //Arrange
-            var input = new List<string>() {"A","B","1","2"};
+            var input = new List<string>() { "A", "B", "1", "2" };
             //Act
-            var result =  await _sut.FetchResults(input);
+            var result = await _sut.FetchResults(input);
             //Assert
             Assert.Equal(4, result.Count);
         }
